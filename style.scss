@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@300;400;500;700&display=swap');
 
 .wrapper {
-  max-width: 1900px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
-  margin: 0 auto;
+  width: 100%;
   font-family: Oswald;
 }
 
@@ -331,6 +329,17 @@
     letter-spacing: 3px;
     color: #252525;
     margin-bottom: 90px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 45px;
+      height: 2px;
+      background-color: #000;
+    }
 
   }
 
@@ -345,6 +354,20 @@
     background-color: #fff;
     padding: 53px 49px 69px 43px;
     position: relative;
+    border-bottom: 0px solid transparent;
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom: 3px solid #70BF73;
+      transition: 0.3s;
+    }
+
+    &:hover .our-services__read-more-btn {
+      background-color: rgba(211, 211, 211, 0.495);
+      transition: 0.3s;
+      font-size: 11px;
+      color: #000;
+    }
   }
 
   &__column-title {
@@ -355,6 +378,17 @@
     text-transform: uppercase;
     color: #252525;
     margin-bottom: 36px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 35px;
+      height: 2px;
+      background-color: #000;
+    }
   }
 
   &__description {
@@ -373,6 +407,12 @@
     letter-spacing: 0.64px;
     text-transform: uppercase;
     color: #252525;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 0.3s;
+
+
   }
 
   &__logo {
@@ -386,6 +426,6 @@
     justify-content: center;
     border-radius: 50%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
   }
 }
